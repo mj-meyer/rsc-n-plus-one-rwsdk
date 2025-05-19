@@ -1,0 +1,29 @@
+{
+  "name": "rsc-n-plus-one-rwsdk",
+  "version": "0.1.0",
+  "description": "RWSDK demo: naive vs batched D1 queries",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview",
+    "clean": "rm -rf node_modules/.vite",
+    "release": "npm run clean && npm run build && wrangler deploy",
+    "db:create": "wrangler d1 create rsc_n_plus_one",
+    "db:seed": "wrangler d1 execute rsc_n_plus_one --local --file migrations/0001_init.sql",
+    "db:seed:prod": "wrangler d1 execute rsc_n_plus_one --file migrations/0001_init.sql"
+  },
+  "dependencies": {
+    "@ryanflorence/batch-loader": "^0.0.1",
+    "rwsdk": "0.0.83"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "typescript": "^5.8.3",
+    "vite": "^6.2.6",
+    "wrangler": "^4.14.1"
+  }
+}
