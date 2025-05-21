@@ -12,7 +12,7 @@
     "release": "npm run clean && npm run build && wrangler deploy",
     "db:create": "wrangler d1 create rsc_n_plus_one",
     "db:seed": "wrangler d1 execute rsc_n_plus_one --local --file migrations/0001_init.sql",
-    "db:seed:prod": "wrangler d1 execute rsc_n_plus_one --file migrations/0001_init.sql"
+    "db:seed:prod": "wrangler d1 execute rsc_n_plus_one --remote --file migrations/0001_init.sql"
   },
   "dependencies": {
     "@ryanflorence/batch-loader": "^0.0.1",

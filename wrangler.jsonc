@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "rsc_n_plus_one",
+  "name": "rsc-n-plus-one",
   "main": "src/worker.tsx",
   "compatibility_date": "2024-09-23",
   "compatibility_flags": ["nodejs_compat"],
